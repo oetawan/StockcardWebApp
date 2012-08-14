@@ -1,0 +1,156 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title></title>
+  <meta name="description" content="">
+
+  <!-- Mobile viewport optimized: h5bp.com/viewport -->
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <link rel="stylesheet" href="Boilerplate/css/style.css">
+  <link rel="stylesheet" href="Boilerplate/css/myfonts.css">
+  <link rel="stylesheet" href="Boilerplate/css/mystyle.css">
+  
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="Boilerplate/js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+<body>
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+  <div id="container">
+
+  <header id="main" class="group">
+    <a href="#" id="better-beer" class="bordered"></a>
+    <a href="#" id="menu-promo" class="bordered"></a>
+    <h1 class="texthide bordered"><a href="#"><img id="logo" src="/Images/logo.png" alt="Border &amp; Radius Brewhouse" /></a></h1>
+  </header>
+
+  <nav id="primary" class="bordered">
+    <ul class="bordered">
+        <li class="bordered"><a href="#">Home</a></li>
+        <li class="bordered"><a href="#">About</a></li>
+        <li class="bordered"><a href="#">Food</a></li>
+        <li class="bordered"><a href="#">Beer</a></li>
+        <li class="bordered"><a href="#">Catering</a></li>
+        <li class="bordered"><a href="#">Locations</a></li>
+        <li class="bordered"><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="promotional" class="group">
+    <img src="/Images/featured.jpg">
+    <div id="selections">
+        <ul>
+            <li>Beers <em>on</em> Tap <span>35</span></li>
+            <li class="bottle">Bottle Selections <span>150</span></li>
+            <li>Beers Brewed <em>on</em>  Site <span>8</span></li>
+        </ul>
+        <a href="#" class="menu bordered">View Our Food Menu</a>
+        <a href="#" class="menu bordered">View Our Beer Menu</a>
+    </div>
+  </section>
+
+  <section id="newsletter" class="box box-right">
+    <header><h1 class="script">Email Newsletter</h1></header>
+    <form id="sign-up">
+        <fieldset>
+            <label for="news-name">Name</label>
+            <input type="text" id="news-name" placeholder="What Shall We Call You" required />
+        </fieldset>
+        <fieldset>
+            <label for="news-email">Email</label>
+            <input type="text" id="news-email" placeholder="e.g. beerme@aol.com" required />
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Subscribe" />
+        </fieldset>
+    </form>
+  </section>
+
+  <footer id="primary-foot">
+    <section id="history">
+        <header><h1>Ouer History</h1></header>
+        <p>We have a pretty awesome story about how we came to be. It
+           all started a long time ago, in a brewery far far away. Lorem
+           ipsum dolor sit amet, consectetur adipisicing elit, sed do
+           eiusmod tempor incididunt ut labore et dolore magna
+           alqua. <a href="#">Read More</a></p>
+    </section>
+    <section id="info">
+        <nav id="footer-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Cases</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Clients</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="copyright">&copy; 2011 Codeschool.com, A Division of Evny Labs<br />
+        This is a fictional case study, although the author does enjoy great food and better beer.</p>
+    </section>
+  </footer>
+
+  <!--<section id="news" class="box">
+    <header><h1 class="script">Latest News</h1></header>
+    <article class="news-item">
+        <header>
+            <h1><a href="#">Border &amp; Radius Named to City's Best List</a></h1>
+        </header>
+        <p>
+            <time datetime="2011-01-26" pubdate>Monday, January 26, 2011</time> | <span class="via">via</span>
+            <a href="#">The Newspaper</a>
+        </p>
+    </article>
+  </section>
+  <section id="specials" class="box">
+    <header>
+        <h1 class="script">Current Specials</h1>
+    </header>
+    <a href="#"><img class="price" src="/Images/price.jpg"></a>
+    <p>Order anything off the lunch menu and pair it with any one of our beers on tap for just $7.77 during lunch hours (11.30p - 2p)</p>
+  </section>-->
+
+  </div>
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="Boilerplate/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+  <!-- scripts concatenated and minified via build script -->
+  <script src="Boilerplate/js/plugins.js"></script>
+  <script src="Boilerplate/js/script.js"></script>
+  <!-- end scripts -->
+
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet -->
+  <script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
