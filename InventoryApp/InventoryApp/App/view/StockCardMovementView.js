@@ -4,11 +4,11 @@
 
 dokuku.inventory.view.StockCardMovement = Backbone.View.extend({
     tagName: 'tr',
-    template: _.template('<td><a href="#"><%= TransactionNumber %></a></td>\
-                          <td><a href="#"><%= DateString %></a></td>\
-                          <td><a href="#"><%= TransctionType %></a></td>\
-                          <td class="align-right"><a href="#"><%= Qty %></a></td>\
-                          <td class="align-right"><a href="#"><%= Balance %></a></td>'),
+    template: _.template('<td><%= TransactionNumber %></td>\
+                          <td><%= DateString %></td>\
+                          <td><%= TransctionType %></td>\
+                          <td class="align-right"><%= Qty %></td>\
+                          <td class="align-right"><%= Balance %></td>'),
     render: function () {
         this.$el.html(this.template(this.model.toJSON()));
         return this;
