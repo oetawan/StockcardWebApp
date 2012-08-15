@@ -40,6 +40,9 @@
     <header id="main">
 		<h1>Stock Card</h1>
 	</header>
+    <section id="back-to-home">
+        <input type="button" value="Back" id="back-to-home-button"/>
+    </section>
     <section id="show-tenant-finder">
         <input type="button" value="Find Tenant" id="show-tenant-finder-button"/>
     </section>
@@ -56,13 +59,10 @@
     </section>
     <section id="primary" class="clear-fix">
         <div id="left-content">
-            <ul>
-                <li><a href="#">Group 1</a></li>
-                <li><a href="#">Group 2</a></li>
-                <li><a href="#">Group 3</a></li>
-            </ul>
         </div>
         <div id="right-content">
+        </div>
+        <div id="center-content">
         </div>
     </section>
   </div>
@@ -90,7 +90,11 @@
   <script src="Backbone/backbone-min.js"></script>
   <script src="App/app.js"></script>
   <script src="App/model/Group.js"></script>
+  <script src="App/model/StockCard.js"></script>
+  <script src="App/model/StockCardMovement.js"></script>
   <script src="App/view/GroupView.js"></script>
+  <script src="App/view/StockCardView.js"></script>
+  <script src="App/view/StockCardMovementView.js"></script>
   <script src="App/controller/Inventory.js"></script>
   <script src="App/inventoryapp.js"></script>
 </body>

@@ -9,6 +9,17 @@ dokuku.inventory.view.GroupView = Backbone.View.extend({
         var html = this.template(this.model.toJSON());
         this.$el.html(html);
         return this;
+    },
+    events: {
+        'click a': 'showStockCard'
+    },
+    showStockCard: function () {
+        var tnId = $('#tenantidfield').val();
+        var groupCode = this.model.get('GroupCode');
+        var stockCardList = new dokuku.inventory.model.StockCardList();
+        var stockCardListView = new dokuku.inventory.view.StockCardListView({ collection: stockCardList });
+        $('#right-content').html(stockCardListView.render().el);
+        stockCardList.fetch({ data: {tenantid: tnId, groupcode: groupCode}});
     }
 });
 

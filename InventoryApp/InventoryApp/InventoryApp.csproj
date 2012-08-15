@@ -16,6 +16,10 @@
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -129,6 +133,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\GroupController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\StockCardController.cs" />
+    <Compile Include="Controllers\StockcardMovementController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -137,14 +143,22 @@
     <Compile Include="Models\Group.cs" />
     <Compile Include="Models\GroupEqComparer.cs" />
     <Compile Include="Models\GroupRepository.cs" />
+    <Compile Include="Models\StockCard.cs" />
+    <Compile Include="Models\StockcardMovement.cs" />
+    <Compile Include="Models\StockcardMovementRepository.cs" />
+    <Compile Include="Models\StockCardRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App\app.js" />
     <Content Include="App\controller\Inventory.js" />
     <Content Include="App\inventoryapp.js" />
+    <Content Include="App\model\StockCardMovement.js" />
+    <Content Include="App\model\StockCard.js" />
     <Content Include="App\model\Group.js" />
+    <Content Include="App\view\StockCardMovementView.js" />
     <Content Include="App\view\GroupView.js" />
+    <Content Include="App\view\StockCardView.js" />
     <Content Include="Backbone\backbone-min.js" />
     <Content Include="Backbone\underscore-min.js" />
     <Content Include="Boilerplate\.gitattributes" />

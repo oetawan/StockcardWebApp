@@ -21,16 +21,17 @@ dokuku.inventory.controller.InventoryController = Backbone.Router.extend({
         $('#left-content').html(this.groupListView.el);
         $('#show-tenant-finder-button').click(this.showTenantFinder);
         $('#submit-tenant-finder').click(this.submitFindTenant);
+        $('#back-to-home-button').click(this.showHome);
     },
     start: function () {
         Backbone.history.start({ pushState: true });
     },
     index: function () {
-        this.groupList.reset([
-            new dokuku.inventory.model.Group({ id: '1', GroupName: 'Item 1', GroupCode: 'Default' }),
-            new dokuku.inventory.model.Group({ id: '2', GroupName: 'Item 2', GroupCode: 'Default' }),
-            new dokuku.inventory.model.Group({ id: '3', GroupName: 'Item 3', GroupCode: 'Default' })
-        ]);
+        /*this.groupList.reset([
+            new dokuku.inventory.model.Group({ id: '1', GroupName: 'Group 1', GroupCode: 'Default' }),
+            new dokuku.inventory.model.Group({ id: '2', GroupName: 'Group 2', GroupCode: 'Default' }),
+            new dokuku.inventory.model.Group({ id: '3', GroupName: 'Group 3', GroupCode: 'Default' })
+        ]);*/
     },
     loadGroup: function () {
         var tnId = $('#tenantidfield').val();
@@ -43,7 +44,20 @@ dokuku.inventory.controller.InventoryController = Backbone.Router.extend({
         ev.preventDefault();
         $('#tenant-finder').css('top', '-200px');
         var tnId = $('#tenantidfield').val();
-        if ($.trim(tnId) === '') return; ;
-        dokuku.inventory.App.groupList.fetch({ data: { tenantid: tnId} });
+        if ($.trim(tnId) === '') return;;
+        $('#right-content').empty();
+        $('#center-content').empty();
+        $('#left-content').css('margin-left', '0');
+        $('#center-content').css('margin-top', '-1000px');
+        $('#right-content').css('margin-right', '0');
+        dokuku.inventory.App.groupList.fetch({ data: { tenantid: tnId } });
+    },
+    showHome: function ()
+    {
+        $('#center-content').empty();
+        $('#left-content').css('margin-left', '0');
+        $('#center-content').css('margin-top', '-1000px');
+        $('#right-content').css('margin-right', '0');
+        $('#back-to-home-button').css('visibility', 'hidden');
     }
 });
