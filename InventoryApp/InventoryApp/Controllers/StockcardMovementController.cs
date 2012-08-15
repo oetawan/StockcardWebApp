@@ -21,7 +21,7 @@ namespace InventoryApp.Controllers
             string productId = queryStrings[1].Split('=')[1];
 
             StockCard sc = new StockCardRepository().FindByProductId(tenantId, productId);
-            List<StockcardMovement> scMovement = new StockcardMovementRepository().FindByProductId(tenantId, productId);
+            List<StockcardMovement> scMovement = new StockcardMovementRepository().FindByProductId(tenantId, productId, sc.Period);
             CalculateRuningTotal(sc, scMovement);
             
             return scMovement;
