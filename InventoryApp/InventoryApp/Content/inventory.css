@@ -272,6 +272,12 @@ table tr td a:hover {
     font: normal 28px "MarketingScriptRegular", Tahoma, Arial, sans-serif;
     color: #787871;
 }
+#center-content h2
+{
+    margin-top: 0;
+    font: normal 20px "DroidSansRegular", Tahoma, Arial, sans-serif;
+    color: #787871;
+}
 #left-content, #center-content, #right-content 
 {
     -webkit-transition: all .3s ease-in-out;

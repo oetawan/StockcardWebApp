@@ -23,6 +23,8 @@ dokuku.inventory.view.StockCard = Backbone.View.extend({
         var stockCardMovementListView = new dokuku.inventory.view.StockCardMovementListView({ collection: stockCardMovementList });
         $('#center-content').empty();
         $('#center-content').append("<h1>" + this.model.get('ProductName') + "</h1>");
+        $('#center-content').append("<h2>Stock Awal: " + this.model.get('OpeningBalance') + "</h2>");
+        $('#center-content').append("<h2>Balance: " + this.model.get('Balance') + "</h2>");
         $('#center-content').append(stockCardMovementListView.render().el);
         stockCardMovementList.fetch({ data: { tenantid: tnId, productid: productId } });
         $('#left-content').css('margin-left', '-1000px');
