@@ -323,3 +323,7 @@ table tr td a:hover {
 {
     opacity: 1;
 }
+.align-center
+{
+    text-align: center;
+}

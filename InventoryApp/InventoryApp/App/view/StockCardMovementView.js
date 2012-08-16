@@ -7,7 +7,20 @@ dokuku.inventory.view.StockCardMovement = Backbone.View.extend({
     template: _.template('<td><%= TransactionNumber %></td>\
                           <td><%= DateString %></td>\
                           <td><%= TransctionType %></td>\
-                          <td class="align-right"><%= Qty %></td>\
+                          <td class="align-right">\
+                              <% if(Qty>0)  { %>\
+                                <span><%= Qty %></span>\
+                              <% } else { %>\
+                                <span>0</span>\
+                              <% } %>\
+                          </td>\
+                          <td class="align-right">\
+                              <% if(Qty<0)  { %>\
+                                <span><%= Qty %></span>\
+                              <% } else { %>\
+                              <span>0</span>\
+                              <% } %>\
+                          </td>\
                           <td class="align-right"><%= Balance %></td>'),
     render: function () {
         this.$el.html(this.template(this.model.toJSON()));
@@ -41,7 +54,8 @@ dokuku.inventory.view.StockCardMovementListView = Backbone.View.extend({
                             <th>No. Transaksi</th>\
                             <th>Tanggal</th>\
                             <th>Jns. Transaksi</th>\
-                            <th class="align-right">Qty</th>\
+                            <th class="align-center">In</th>\
+                            <th class="align-center">Out</th>\
                             <th class="align-right">Balance</th>\
                          </thead>');
     }
