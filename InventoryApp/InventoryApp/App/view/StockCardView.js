@@ -29,7 +29,7 @@ dokuku.inventory.view.StockCard = Backbone.View.extend({
         stockCardMovementList.fetch({ data: { tenantid: tnId, productid: productId } });
         $('#left-content').css('margin-left', '-1000px');
         $('#center-content').css('margin-top', '0px');
-        $('#right-content').css('margin-right', '-1000px');
+        $('#right-content').css('display', 'none');
         $('#back-to-home-button').css('visibility','visible');
     },
 });

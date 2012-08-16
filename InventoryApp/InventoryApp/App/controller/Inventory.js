@@ -49,7 +49,7 @@ dokuku.inventory.controller.InventoryController = Backbone.Router.extend({
         $('#center-content').empty();
         $('#left-content').css('margin-left', '0');
         $('#center-content').css('margin-top', '-1000px');
-        $('#right-content').css('margin-right', '0');
+        $('#right-content').css('display', 'block');
         $('#back-to-home-button').css('visibility', 'hidden');
         dokuku.inventory.App.groupList.fetch({ data: { tenantid: tnId} });
     },
@@ -57,7 +57,7 @@ dokuku.inventory.controller.InventoryController = Backbone.Router.extend({
         $('#center-content').empty();
         $('#left-content').css('margin-left', '0');
         $('#center-content').css('margin-top', '-1000px');
-        $('#right-content').css('margin-right', '0');
+        $('#right-content').css('display', 'block');
         $('#back-to-home-button').css('visibility', 'hidden');
     }
 });
