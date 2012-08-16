@@ -28,9 +28,9 @@ dokuku.inventory.controller.InventoryController = Backbone.Router.extend({
     },
     index: function () {
         /*this.groupList.reset([
-            new dokuku.inventory.model.Group({ id: '1', GroupName: 'Group 1', GroupCode: 'Default' }),
-            new dokuku.inventory.model.Group({ id: '2', GroupName: 'Group 2', GroupCode: 'Default' }),
-            new dokuku.inventory.model.Group({ id: '3', GroupName: 'Group 3', GroupCode: 'Default' })
+        new dokuku.inventory.model.Group({ id: '1', GroupName: 'Group 1', GroupCode: 'Default' }),
+        new dokuku.inventory.model.Group({ id: '2', GroupName: 'Group 2', GroupCode: 'Default' }),
+        new dokuku.inventory.model.Group({ id: '3', GroupName: 'Group 3', GroupCode: 'Default' })
         ]);*/
     },
     loadGroup: function () {
@@ -44,16 +44,16 @@ dokuku.inventory.controller.InventoryController = Backbone.Router.extend({
         ev.preventDefault();
         $('#tenant-finder').css('top', '-200px');
         var tnId = $('#tenantidfield').val();
-        if ($.trim(tnId) === '') return;;
+        if ($.trim(tnId) === '') return; ;
         $('#right-content').empty();
         $('#center-content').empty();
         $('#left-content').css('margin-left', '0');
         $('#center-content').css('margin-top', '-1000px');
         $('#right-content').css('margin-right', '0');
-        dokuku.inventory.App.groupList.fetch({ data: { tenantid: tnId } });
+        $('#back-to-home-button').css('visibility', 'hidden');
+        dokuku.inventory.App.groupList.fetch({ data: { tenantid: tnId} });
     },
-    showHome: function ()
-    {
+    showHome: function () {
         $('#center-content').empty();
         $('#left-content').css('margin-left', '0');
         $('#center-content').css('margin-top', '-1000px');

@@ -114,7 +114,7 @@ body
 	background: #fafaf6;
 	border: 5px solid #e9e9e4;
 	padding: 5px 10px;
-	z-index: 999;
+	z-index: 1001;
 	-webkit-transition: all .2s ease-in-out;
 	-moz-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
