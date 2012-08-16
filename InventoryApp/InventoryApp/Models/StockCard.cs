@@ -18,4 +18,12 @@ namespace InventoryApp.Models
         public double OpeningBalance { get; set; }
         public double Balance { get; set; }
     }
+
+    public class StockCardAscOrder : IComparer<StockCard>
+    {
+        public int Compare(StockCard x, StockCard y)
+        {
+            return x.ProductName.CompareTo(y.ProductName);
+        }
+    }
 }

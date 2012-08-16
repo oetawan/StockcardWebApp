@@ -15,7 +15,7 @@ namespace InventoryApp.Models
             mongoDb = MongoDatabase.Create(System.Configuration.ConfigurationManager.AppSettings["MONGOSVR_URL"]);
         }
 
-        public IList<StockCard> FindByGroup(int tenantId, string groupCode)
+        public List<StockCard> FindByGroup(int tenantId, string groupCode)
         {
             return StockCardSnapshotCollection.Find(Query.And(
                 Query.EQ("TenantId", tenantId),

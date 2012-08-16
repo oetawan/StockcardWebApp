@@ -13,7 +13,9 @@ namespace InventoryApp.Controllers
             int tenantId = int.Parse(queryStrings[0].Split('=')[1]);
             string groupCode = queryStrings[1].Split('=')[1];
 
-            return new StockCardRepository().FindByGroup(tenantId, groupCode);
+            List<StockCard> result = new StockCardRepository().FindByGroup(tenantId, groupCode);
+            result.Sort(new StockCardAscOrder());
+            return result;
         }
     }
 }
