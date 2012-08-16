@@ -266,7 +266,7 @@ table tr td a:hover {
     font: normal 14px "DroidSansRegular", Tahoma, Arial, sans-serif;
     color: #787871;
 }
-#center-content h1 
+#center-content h1, #right-content h1
 {
     margin-top: 0;
     font: normal 28px "MarketingScriptRegular", Tahoma, Arial, sans-serif;

@@ -18,8 +18,10 @@ dokuku.inventory.view.GroupView = Backbone.View.extend({
         var groupCode = this.model.get('GroupCode');
         var stockCardList = new dokuku.inventory.model.StockCardList();
         var stockCardListView = new dokuku.inventory.view.StockCardListView({ collection: stockCardList });
-        $('#right-content').html(stockCardListView.render().el);
-        stockCardList.fetch({ data: {tenantid: tnId, groupcode: groupCode}});
+        $('#right-content').empty();
+        $('#right-content').append('<h1>' + this.model.get('GroupName') + '</h1>');
+        $('#right-content').append(stockCardListView.render().el);
+        stockCardList.fetch({ data: { tenantid: tnId, groupcode: groupCode} });
     }
 });
 
